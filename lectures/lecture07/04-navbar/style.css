@@ -10,3 +10,19 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
+nav {
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-between;
+    padding-left: ;
+
+}
+
+ul{
+    border: solid 1px black;
+    display: flex;
+    list-style-type: none;
+    width: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+}

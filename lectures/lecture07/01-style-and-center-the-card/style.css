@@ -15,7 +15,29 @@ justify-content and align-items properties to center the card.
 */
 main {
     min-height: 100vh;
+    display: flex;
+    border: solid 1px #000; 
+    justify-content: center;
+    align-items: center;
 }
+/* What controls it in html , look at parent and then use that class/divison */
+.card{
+    width: 25%;
+    border: solid 1px gray;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card p, .card h2, .card button {
+    /* dont understand this part */
+    /* shortcut use comma to add multiplerules */
+    /* padding: 10px;  */
+    margin: 10px;
+}
+ 
+
 
 /*
 Part 1: Create some style blocks to style the card. 
