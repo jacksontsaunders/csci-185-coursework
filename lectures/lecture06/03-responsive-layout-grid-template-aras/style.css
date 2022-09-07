@@ -15,7 +15,7 @@ body {
   color: #333;
   background-color: snow;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: auto;
 }
 
 .item {
@@ -32,32 +32,63 @@ body {
 
 /* Task 3 */
 
-.task-3.container {
+.container {
+    display: grid;
+    grid-template-columns: 300px auto 25% ;
+    grid-template-rows: 10% 10% 70% 10%;
+    border: solid 1px black;
+    height: 100vh;
+    row-gap: 15px;
+    column-gap: 15px;
 }
 
-.task-3 .header {
+.header{
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  background-color: gray;
 }
 
-.task-3 .navigation {
+.navigation {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  background-color: gray;
 }
 
-.task-3 .ads {
+.sidebar{
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-row-end: 4;
+  background-color: gray;
+
 }
 
-.task-3 .sidebar {
-}
+/* .task-3.container { */
+/* } */
 
-.task-3 .main {
-}
+/* .task-3 .header { */
+/* } */
 
-.task-3 .footer {
-}
+/* .task-3 .navigation { */
+/* } */
+
+/* .task-3 .ads { */
+/* } */
+
+/* .task-3 .sidebar { */
+/* } */
+
+/* .task-3 .main { */
+/* } */
+
+/* .task-3 .footer { */
+/* } */
 
 
 
-@media (max-width: 1020px) {
-}
+/* @media (max-width: 1020px) { */
+/* } */
 
 
-@media (max-width: 720px) {
-}
+/* @media (max-width: 720px) { */
+/* } */
