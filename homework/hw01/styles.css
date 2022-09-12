@@ -16,6 +16,8 @@ ul {
     display:flex;
     align-items: center;
     justify-content: right;
+    margin: 0;
+    padding: 20px;
 
 }    
 header {
@@ -36,10 +38,33 @@ a, a:link, a:visited, a:hover, a:active {
     font-weight: bold;
     margin: 10px;
 }    
-.profilepic {
-    justify-content: center;
-    align-items: center;
+h1 {
+    font-family: 'Aboreto', cursive;
+    color: white;
 }
+h2 {
+    /* cant adjust padding correctly */
+    font-family: 'Aboreto', cursive;
+   
+}
+#profile-pic {
+    /* Have tried multiple things belive im not targeting correct item , should i decalre div?*/
+    border-radius: 50%;
+}
+#projects, #about {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+.project-holder {
+    height: 100vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+}
+
+
 #contact {
     padding-left: 10vw;
     padding-right: 10vw;
@@ -59,11 +84,12 @@ a, a:link, a:visited, a:hover, a:active {
 .row p {
     margin: 0;
 }
-/* spacing for contactbox */
+/* spacing for contactbox is not correct*/
 form .row1 {
     display: grid;
     grid-template-columns: 40% auto;
     column-gap:  15px;
+    margin-bottom: 15px;
 }
 form.row {
     margin-bottom: 10px;
@@ -84,10 +110,7 @@ input, textarea {
     width: 100%;
     margin: 0;
 }
-#projects {
-    display: grid;
-    
-}
+
 footer {
     background-color: rgb(224, 224, 224);
     text-align: center;
