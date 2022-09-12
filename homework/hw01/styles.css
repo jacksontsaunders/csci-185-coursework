@@ -9,18 +9,36 @@ body * {
 body {
     margin: 0;
 }
-nav {
 
-}
+ul {
+    list-style-type: none;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: right;
+
+}    
 header {
     background-color: darkgray;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    
+    align-items: center; 
+    text-align: center;
 }
-#img.profilepic {
+#title {
     justify-content: center;
+    align-items: center;
+}
+a, a:link, a:visited, a:hover, a:active {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+}    
+.profilepic {
+    justify-content: center;
+    align-items: center;
 }
 #contact {
     padding-left: 10vw;
@@ -41,6 +59,7 @@ header {
 .row p {
     margin: 0;
 }
+/* spacing for contactbox */
 form .row1 {
     display: grid;
     grid-template-columns: 40% auto;
@@ -64,6 +83,16 @@ input, textarea {
 #message {
     width: 100%;
     margin: 0;
+}
+#projects {
+    display: grid;
+    
+}
+footer {
+    background-color: rgb(224, 224, 224);
+    text-align: center;
+
+
 }
 /* #name {
     width: 40%;
