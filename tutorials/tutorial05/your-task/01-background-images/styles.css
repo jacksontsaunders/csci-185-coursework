@@ -22,13 +22,13 @@ header {
     display: flex;
     align-items: flex-end; /* vertical-align text on the bottom */
     justify-content: center; /* horizontal-align text in the center */
+    filter: grayscale(100%);
     
-    
-    /* background-image: url('solar-eclipse.jpg');
+    background-image: url('pexels-photo-1552212.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
-    background-position-y: center; */
+    background-position-y: center; 
 }
 
 section {
@@ -39,11 +39,12 @@ section {
     background-color: black;
     padding-left: 0px;
 
-    /* background-image: url('solar-eclipse-multiples.jpg');
+    background-image: url('snow-mountains\ .jpeg'); 
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;
-    background-attachment: fixed; */
+    background-attachment: fixed; 
+    filter: grayscale(100%);
 }
 
 .text-container {
