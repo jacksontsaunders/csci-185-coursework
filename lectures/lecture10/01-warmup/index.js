@@ -4,7 +4,6 @@ const toggleFall = () => {
 
    document.querySelector("h1").textContent = "Happy Fall";
 
-
 //    Added above code to allow links to click bewteen
 }
 
@@ -16,15 +15,11 @@ const toggleWinter = () => {
 
     // Three options to add title that changes when clicking 
 
-
-    
 }
 const toggleSpring = () => {
 
     document.querySelector("body").className = "spring";
 
     document.querySelector("h1").innerHTML = "Happy Spring";
-
-
    
 }
