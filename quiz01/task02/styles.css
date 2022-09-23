@@ -51,7 +51,11 @@ code {
 #card1 , #card3 , #card5 {
     background-color: #EEEEEE;
 }
-#card1 img[src="https://picsum.photos/id/10/200/200"] {
+/* #card1 img[src="https://picsum.photos/id/10/200/200"] { */
+    /* border-radius: 50%; */
+
+
+#card1 img {
     border-radius: 50%;
 }
 #card3 img[src="https://picsum.photos/id/12/200/200"] {
