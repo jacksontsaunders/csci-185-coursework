@@ -1,11 +1,11 @@
-const makeBigger = () => {
+const makefontBigger = () => {
    
    document.querySelector("p").style.fontSize= "80px";
    document.querySelector("h1").style.fontSize= "80px";
 
 };
 
-const makeSmaller = () => {
+const makefontSmaller = () => {
 
    document.querySelector("p").style.fontSize= "20px";
    document.querySelector("h1").style.fontSize= "20px";
