@@ -2,9 +2,13 @@ function setup() {
     const canvasWidth = window.innerWidth;
     const canvasHeight = window.innerHeight; 
     createCanvas(canvasWidth, canvasHeight);
-    background("pink");
+    background("#456abc");
 
+    drawSmiley(10, 70, 300);
+    drawSmiley(100, 90, 500); 
+    drawSmiley(150, 120, 30);
 
+    // invoke drawSmiley
     // add your drawing here:
     // https://p5js.org/reference/#/p5/point
     // point(110, 20);
@@ -15,6 +19,12 @@ function setup() {
     // https://p5js.org/reference/#/p5/circle
     // fill('red');
     // circle(550, 100, 100);
+    // fill ('black');
+    // circle(570, 70, 20)
+    // circle(530, 70, 20)
+    // ellipse(550, 120, 50, 20);
+
+    
 
     // https://p5js.org/reference/#/p5/ellipse
     // fill('teal');
@@ -29,4 +39,12 @@ function setup() {
 
     // for debugging:
     drawGrid(canvasWidth, canvasHeight)
+}
+
+
+
+
+function drawSmiley(x, y, diameter) {
+    fill("yellow");
+    circle(400, 400, diameter); // x, y, diameter
 }
