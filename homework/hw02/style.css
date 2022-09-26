@@ -2,7 +2,11 @@ body {
     font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
     color: #fff;
 }
-a, a:hover, a:visited, a:active { 
+
+a,
+a:hover,
+a:visited,
+a:active {
     color: #fff;
     text-decoration: none;
 }
@@ -14,10 +18,16 @@ a, a:hover, a:visited, a:active {
 /**********/
 /* Layout */
 /**********/
-aside, footer, header, nav, section, article {
+aside,
+footer,
+header,
+nav,
+section,
+article {
     display: flex;
     flex-direction: column;
 }
+
 body {
     overflow: hidden;
     margin: 0px;
@@ -27,10 +37,12 @@ body {
     grid-template-columns: 250px auto;
     grid-template-rows: auto 100px;
 }
+
 aside {
     background-color: #000;
     grid-column-start: 1;
 }
+
 header {
     background: #111;
     position: sticky;
@@ -75,15 +87,25 @@ footer {
     background-clip: padding-box;
     min-height: 30px;
 }
+
 ::-webkit-scrollbar-thumb {
-    background-color: hsla(0,0%,100%,.3);
+    background-color: hsla(0, 0%, 100%, .3);
 }
 
 /***************************/
 /* Part A: Left Navigation */
 /***************************/
+#sidebar {
+    width: 300px;
+    padding: 50px;
+    /* Remove margin? */
+}
 
-/* Your Code Here */
+h1 {
+    justify-content: flex-start
+}
+
+
 
 
 
@@ -91,8 +113,22 @@ footer {
 /* Part B: Header & Nav Styling */
 /********************************/
 
-/* Your Code Here */
 
+header {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+/* need to seperate profile and upgrade from others */
 
 
 
@@ -100,10 +136,32 @@ footer {
 /*************************/
 /* Part C: Artists Panel */
 /*************************/
-
 /* Your Code Here.
    For the desktop view, there should be 5 cards per row.
 */
+#featured-content {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    column-gap: 20px;
+    row-gap: 20px;
+
+
+
+}
+
+.artist-card {
+    background-color:rgb(71, 70, 70);
+    border-radius: 10px;
+    padding: 10px;
+}
+.artist-card button {
+    display: none;
+}
+.artist-card img {
+    width: 100%;
+    border-radius: 50%;
+    
+}
 
 
 
@@ -117,19 +175,34 @@ footer {
 /* Your Code Here */
 
 @media screen and (max-width: 1000px) {
+
     /* 
         Tablet Display: 3 cards per row!
-    
     */
+    .artist-card {
+        display: grid;
+        columns: 2 auto;
+    }
 }
 
 
 @media screen and (max-width: 700px) {
+
     /* Mobile Display 
         * 2 cards per row
         * The aside panel and "Upgrade" button should no longer be visible.
         * There should only be a 1-column layout.
     */
+    .artist-card {
+        display: grid;
+        columns: 1 auto;
+    }
+
+    #upgrade {
+        display: none;
+    }
+
+
+
+
 }
-
-
