@@ -126,6 +126,7 @@ header {
     border-radius: 10px;
     padding: 10px;
     outline: 2px solid gray;
+    margin-right: 30px;
     
 }
 #profile {
@@ -136,16 +137,19 @@ header {
 
 nav {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; 
     flex-direction: row;
-    justify-content: space-evenly;
-    
+    /* justify-content: space-evenly; */
+}
+#playlists {
+    margin-left: 30px;
+    margin-right: 150px;
+}
+#albums {
+    margin-right: 150px;
 }
 
 /* need to seperate profile and upgrade from others */
-
-
-
 
 /*************************/
 /* Part C: Artists Panel */
