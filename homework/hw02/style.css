@@ -118,14 +118,27 @@ header {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+    margin-right: 50px;
+    margin-top: 25px;
 }
-
-
+#upgrade {
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+    outline: 2px solid gray;
+    
+}
+#profile {
+    background-color:rgb(47, 46, 46);
+    border-radius: 10px;
+    padding: 10px;
+}
 
 nav {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 /* need to seperate profile and upgrade from others */
@@ -150,7 +163,7 @@ nav {
 }
 
 .artist-card {
-    background-color:rgb(71, 70, 70);
+    background-color:rgb(47, 46, 46);
     border-radius: 10px;
     padding: 10px;
 }
@@ -188,21 +201,22 @@ nav {
 
 @media screen and (max-width: 700px) {
 
-    /* Mobile Display 
-        * 2 cards per row
-        * The aside panel and "Upgrade" button should no longer be visible.
-        * There should only be a 1-column layout.
-    */
-    .artist-card {
+    #featured-content {
         display: grid;
-        columns: 1 auto;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 15px;
+        column-gap: 15px;
     }
-
-    #upgrade {
+    
+    #upgrade, #sidebar {
         display: none;
     }
+   body {
+    grid-template-columns: 100%;
+   }
 
-
-
+   main {
+    grid-column-start: 1;
+   }
 
 }
