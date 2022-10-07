@@ -5,7 +5,7 @@ function setup() {
 
     // Once you've created your drawCreature function, 
     // invoke drawCreature 5 times with the following arguments
-    // (feel free to change the sizes, positions, and colors):
+    // (feel free to change the sizes, positions, and colors):.
     
     drawCreature(92, 115, 85, '#5e6976', '#1b324d');
     drawCreature(487, 110, 101, '#bfdc65', '#abb880');
