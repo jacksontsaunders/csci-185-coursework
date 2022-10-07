@@ -17,22 +17,41 @@ function setup() {
 }
 
 // define your drawCreature function here:
-function drawCreature(centerX, centerY, size , faceColor = 'yellow') {
-    fill(faceColor);
-    circle(centerX, centerY, size); //100, 400, 50
-    fill('black');
-    let sf = size / 6.5;
-    circle(centerX - sf, centerY - sf, sf); // Left eye
-    circle(centerX + sf, centerY - sf, sf); // Right eye
+// function drawCreature(centerX, centerY, size , faceColor = 'yellow') {
+//     fill(faceColor);
+//     circle(centerX, centerY, size); //100, 400, 50
+//     fill('black');
+//     let sf = size / 6.5;
+//     circle(centerX - sf, centerY - sf, sf); // Left eye
+//     circle(centerX + sf, centerY - sf, sf); // Right eye
 
-    noFill()
-    stroke('black');
-    curve(
-        centerX - sf*2, centerY - 1.5 * size,    // control point
-        centerX - sf*2, centerY + .8 * sf,   // start point
-        centerX + sf*2, centerY + .8 * sf,   // end point
-        centerX + sf*2, centerY - 1.5 * size        // control point
-    );
+//     noFill()
+//     stroke('black');
+//     curve(
+//         centerX - sf*2, centerY - 1.5 * size,    // control point
+//         centerX - sf*2, centerY + .8 * sf,   // start point
+//         centerX + sf*2, centerY + .8 * sf,   // end point
+//         centerX + sf*2, centerY - 1.5 * size        // control point
+//     );
+    function drawCreature(centerX, centerY, size , faceColor = 'orange') {
+       fill('black')
+        square(85,55,20,) //Stem
+        fill('orange');
+        circle(centerX, centerY, size); //100, 400, 50
+        fill('black');
+        // let sf = size / 6.5;
+        triangle(triangle(80, 80, 90, 90, 80, 100)) // Left eye x1, y1, x2, y2, x3, y3)
+        triangle(triangle(110, 80, 100, 90, 120, 100)) // Right eye
+        triangle(triangle(100, 120, 105, 105, 90, 105)) //Nose
+        circle(100,139,30); //Mouth
+        
+    
+        // noFill()
+        // stroke('black');
+        // // curve(
+            
 
+
+}
 
 

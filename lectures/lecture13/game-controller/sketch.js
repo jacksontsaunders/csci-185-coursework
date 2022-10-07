@@ -18,10 +18,39 @@ function setup() {
 
 const moveController = ev => {
     console.log(ev.code);
-    // left arrow moves circle left
-    // right arrow moves circle right
-    // up arrow moves circle up
-    // down arrow moves circle down
+    if (ev.code == 'KeyW') {
+        console.log ('Go up');
+        y= y - 2;
+    }
+    else if (ev.code == 'KeyS') {
+        console.log ('Go down');
+        y= y + 2;
+    }
+    else if (ev.code == 'KeyA') {
+        console.log ('Go left');
+        x= x - 2;
+    }
+    else if (ev.code == 'KeyD') {
+        console.log ('Go right');
+        x= x + 2;
+    }
+    else if (ev.code == 'Space') {
+        width += 10;
+    }
+    else if (ev.code == 'Escape') {
+        width -= 10;
+    }
+
+// use else if so that if one if is satisfied it wont run the others
+
+
+
+
+
+    // a arrow moves circle left
+    // d arrow moves circle right
+    // w arrow moves circle up
+    // s arrow moves circle down
 
     // redraw circle:
     clear();
