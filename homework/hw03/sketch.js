@@ -35,7 +35,8 @@ function setup() {
 //     );
     function drawCreature(centerX, centerY, size , faceColor = 'orange') {
        fill('black')
-        square(85,55,20,) //Stem
+       let sf = size / 6.5;
+        square(centerX-7,centerY-58,size *.25,) //Stem
         fill('orange');
         circle(centerX, centerY, size); //100, 400, 50
         fill('black');
