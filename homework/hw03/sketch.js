@@ -16,23 +16,7 @@ function setup() {
     drawGrid(canvasWidth, canvasHeight);
 }
 
-// define your drawCreature function here:
-// function drawCreature(centerX, centerY, size , faceColor = 'yellow') {
-//     fill(faceColor);
-//     circle(centerX, centerY, size); //100, 400, 50
-//     fill('black');
-//     let sf = size / 6.5;
-//     circle(centerX - sf, centerY - sf, sf); // Left eye
-//     circle(centerX + sf, centerY - sf, sf); // Right eye
 
-//     noFill()
-//     stroke('black');
-//     curve(
-//         centerX - sf*2, centerY - 1.5 * size,    // control point
-//         centerX - sf*2, centerY + .8 * sf,   // start point
-//         centerX + sf*2, centerY + .8 * sf,   // end point
-//         centerX + sf*2, centerY - 1.5 * size        // control point
-//     );
     function drawCreature(centerX, centerY, size , faceColor = 'orange',backupColor = 'black') {
        fill(backupColor)
        let sf = size / 5;
