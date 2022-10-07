@@ -33,13 +33,13 @@ function setup() {
 //         centerX + sf*2, centerY + .8 * sf,   // end point
 //         centerX + sf*2, centerY - 1.5 * size        // control point
 //     );
-    function drawCreature(centerX, centerY, size , faceColor = 'orange') {
-       fill('black')
+    function drawCreature(centerX, centerY, size , faceColor = 'orange',backupColor = 'black') {
+       fill(backupColor)
        let sf = size / 5;
         square(centerX-sf * 1 ,centerY-sf * 4,size -sf * 3,) //Stem
-        fill('orange');
+        fill(faceColor);
         circle(centerX, centerY, size); //100, 400, 50
-        fill('black');
+        fill(backupColor);
         
         triangle(
             centerX- sf* .5, centerY -sf* 1.3, //top
