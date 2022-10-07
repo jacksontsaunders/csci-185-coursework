@@ -8,7 +8,7 @@ function setup() {
     // (feel free to change the sizes, positions, and colors):.
     
     drawCreature(92, 115, 85, '#5e6976', '#1b324d');
-    drawCreature(487, 110, 101, '#bfdc65', '#abb880');
+    drawCreature(487, 110, 301, '#bfdc65', '#abb880');
     drawCreature(454, 423, 141, '#aebb83', '#227876');
     drawCreature(333, 227, 99, '#94ba77', '#3f5364');
     drawCreature(117, 314, 91, '#648d8e', '#afc272');
@@ -41,16 +41,29 @@ function setup() {
         circle(centerX, centerY, size); //100, 400, 50
         fill('black');
         
-        triangle(triangle(80, 80, 90, 90, 80, 100)) // Left eye x1, y1, x2, y2, x3, y3)
-        triangle(triangle(110, 80, 100, 90, 120, 100)) // Right eye
-        triangle(triangle(100, 120, 105, 105, 90, 105)) //Nose
-        circle(centerX+ sf* .6,centerY+sf *1.4,size-sf *3.1); //Mouth
+        triangle(
+            centerX- sf* .5, centerY -sf* 1.3, //top
+            centerX- sf* 1.6, centerY+ sf* .005, //bottom left
+            centerX- sf* .5, centerY+ sf* .001 //bottom right
+            ) // Left eye x1, y1, x2, y2, x3, y3)
+        triangle(
+            centerX+ sf* .5, centerY -sf* 1.3, //top
+            centerX+ sf* 1.6, centerY+ sf* .005, //bottom left
+            centerX+ sf* .5, centerY+ sf* .001 
+            )//bottom right
+        triangle(
+            centerX- sf* .5, centerY+ sf* .6, 
+            centerX+ sf* .5, centerY+ sf* .6 , 
+            centerX, centerY +sf* 1.3) //Nose
         
+        
+        // triangle(triangle(100, 120, 105, 105, 90, 105)) //Nose
     
         // noFill()
         // stroke('black');
         // // curve(
-            
+            //80, 80, 90, 90, 80, 100 left eye
+            //110, 80, 100, 90, 120, 100 right eye
 
 
 }
