@@ -36,7 +36,7 @@ function setup() {
     function drawCreature(centerX, centerY, size , faceColor = 'orange') {
        fill('black')
        let sf = size / 5;
-        square(centerX-sf*1 ,centerY-sf*4,size -sf*3,) //Stem
+        square(centerX-sf * 1 ,centerY-sf * 4,size -sf * 3,) //Stem
         fill('orange');
         circle(centerX, centerY, size); //100, 400, 50
         fill('black');
@@ -44,7 +44,7 @@ function setup() {
         triangle(triangle(80, 80, 90, 90, 80, 100)) // Left eye x1, y1, x2, y2, x3, y3)
         triangle(triangle(110, 80, 100, 90, 120, 100)) // Right eye
         triangle(triangle(100, 120, 105, 105, 90, 105)) //Nose
-        circle(centerX+sf*.6,centerY+sf*1.4,size-sf*3.1); //Mouth
+        circle(centerX+ sf* .6,centerY+sf *1.4,size-sf *3.1); //Mouth
         
     
         // noFill()
