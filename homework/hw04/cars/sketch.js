@@ -6,10 +6,16 @@ const c1 = {
     x: 100,
     y: 100,
     width: 200,
-    speed: 0.2,
+    speed: 4,
     color: 'hotpink'
 };
-
+const c2 = {
+    x: 100,
+    y: 500,
+    width: 200,
+    speed: 4,
+    color: 'blue'
+};
 
 // required to set up the canvas:
 function setup() {
