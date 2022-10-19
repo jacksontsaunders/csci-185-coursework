@@ -43,8 +43,8 @@ const circleData = [
 function draw() {
     clear();
     
-    let i = 0;
-    while (i < circleData.length) {
+    // let i = 0;
+    for (let i = 0;  i < circleData.length; i++) {
         // new:
         const ball = circleData[i]; // {x: 500, y: 50, d: 100, speedX: 3, speedY: 3},
 
@@ -55,7 +55,7 @@ function draw() {
         ball.y += ball.speedY;
 
         //new:
-        i++;
+        // i++;
 
     }
    
