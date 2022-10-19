@@ -12,24 +12,17 @@ async function setup() {
     rando = Math.random() * 490 + 10;
     console.log(rando);
     
-    // draws 4 stars: 
+    // draws 1000 stars: 
     strokeWeight(0);
     fill('white');
-    circle(50, 80, 2.5);
-    circle(50, 400, 1.5);
-    circle(600, 287, 3);
-    circle(400, 143, 1.5);
-}
-
-function drawStars() {
-    strokeWeight(0);
-    fill('white');
-    for (let i = 0; i < 1000; i++) {
+    let i = 0;
+    while (i < 1000) {
         const x = Math.random() * canvasWidth;
         const y = Math.random() * canvasHeight;
         const width = Math.random() * 2 + 0.5;
         circle(x, y, width);
-    }
+        i++;
+}
 }
 
 function drawBubbles() {
