@@ -36,3 +36,31 @@ function drawBubbles() {
         circle(x, y, width);
     }
 }
+function draw(){
+    clear();
+    frameRate(.8);
+    let i = 0;
+    while (i < 1000) {
+        //Tried smaller values in effort to allow a a few stars
+        //to animate but keeping others stationary
+        const x = Math.random() * canvasWidth;
+        const y = Math.random() * canvasHeight;
+        const width = Math.random() * 2 + 0.5;
+        circle(x, y, width);
+        i++;
+    }
+}
+
+
+
+    strokeWeight(0);
+    fill('white');
+    let i = 0;
+    while (i < 1000) {
+        const x = Math.random() * canvasWidth;
+        const y = Math.random() * canvasHeight;
+        const width = Math.random() * 2 + 0.5;
+        circle(x, y, width);
+        i++;
+}
+    
