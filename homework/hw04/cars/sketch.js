@@ -43,14 +43,16 @@ function draw() {
 
     // redraw the car:
     drawCar(c1.x, c1.y, c1.width, c1.color);
+    if (c1.x < -200) {
+        c1.x = canvasWidth; 
+ 
+     }
     drawCar(c2.x, c2.y, c2.width, c2.color);
+    if (c2.x > canvasWidth+ 400) {
+       c2.x = -100; 
+
+    }
     drawCar(c3.x, c3.y, c3.width, c3.color);
-    // let i = 0;
-    // while (i < canvasWidth) {
-    //    const item = c3[i];
-    //     item.c3 += c3.speed;
-    //     i++;
-    // }
     
     // draw the grid (optional -- feel free to remove this line):
     drawGrid(canvasWidth, canvasHeight);
@@ -70,3 +72,6 @@ function drawCar(x, y, size, fillColor, wheelColor='black') {
     circle(x - size / 4, y, size / 6);
     circle(x + size / 4, y, size / 6);
 }
+
+
+
