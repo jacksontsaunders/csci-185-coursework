@@ -5,13 +5,25 @@ const canvasHeight = window.innerHeight;
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
 
-    drawCreature(425, 225, 200);
+    drawCreature(creature.x, creature.y, creature.s);
 
     drawGrid(canvasWidth, canvasHeight);
+
 }
+const creature = {
+    x: 300,
+    y: 300,
+    s: 100,
+}
+
 
 // replace this function with YOUR creature!
 
+let activeShape = creature;
+
+function mouseClicked () {
+    
+}
 function drawCreature(centerX, centerY, size , faceColor = 'orange',backupColor = 'black') {
     fill(backupColor)
     let sf = size / 5;
@@ -35,18 +47,25 @@ function drawCreature(centerX, centerY, size , faceColor = 'orange',backupColor 
          centerX+ sf* .5, centerY+ sf* .6 , 
          centerX, centerY +sf* 1.3) //Nose
 }
+
 function mouseDragged() {
     let distance = dist(creature.x, creature.y, mouseX, mouseY);
     console.log(distance, creature.x, creature.y, mouseX, mouseY);
-    if ( distance < data.d/2) {
-        activeShape = data;
+    if ( distance < creature.s/2) {
+        activeShape = creature;
     } 
    
     activeShape.x = mouseX;
     activeShape.y = mouseY;
+}
 
-
-function mouseReleased() {
+function draw() {
     // data.color = 'white';
+    clear();
+    drawCreature(creature.x, creature.y, creature.s);
+    drawGrid(canvasWidth, canvasHeight);
+
+
+
 }
-}
+
