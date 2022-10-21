@@ -53,6 +53,10 @@ function draw() {
 
     }
     drawCar(c3.x, c3.y, c3.width, c3.color);
+    if (c3.x < -200) {
+        c3.x = canvasWidth; 
+    }
+ 
     
     // draw the grid (optional -- feel free to remove this line):
     drawGrid(canvasWidth, canvasHeight);
