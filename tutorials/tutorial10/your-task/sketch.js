@@ -35,3 +35,18 @@ function drawCreature(centerX, centerY, size , faceColor = 'orange',backupColor 
          centerX+ sf* .5, centerY+ sf* .6 , 
          centerX, centerY +sf* 1.3) //Nose
 }
+function mouseDragged() {
+    let distance = dist(creature.x, creature.y, mouseX, mouseY);
+    console.log(distance, creature.x, creature.y, mouseX, mouseY);
+    if ( distance < data.d/2) {
+        activeShape = data;
+    } 
+   
+    activeShape.x = mouseX;
+    activeShape.y = mouseY;
+
+
+function mouseReleased() {
+    // data.color = 'white';
+}
+}
