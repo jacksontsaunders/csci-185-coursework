@@ -1,11 +1,12 @@
 const canvasWidth = window.innerWidth;
 const canvasHeight = window.innerHeight; 
 const creature = {x: 300,y: 300,s: 100,}
+let doJump = false;
+let counter = 0;
+let initialY = drawCreature.y;
 
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
-
-    drawGrid(canvasWidth, canvasHeight);
 }
     function drawCreature(centerX, centerY, size , faceColor = 'orange',backupColor = 'black'){
         fill(backupColor)
@@ -50,8 +51,29 @@ function setup() {
 function draw() {
     clear();
     drawCreature(creature.x, creature.y, creature.s);
-    drawGrid(canvasWidth, canvasHeight);
-
+    //drawGrid(canvasWidth, canvasHeight);
+    if (doJump) {
+        // animate for one Math.sin cycle, then 
+        // turn doJump variable to false
+        const jumpHeight = -15;
+        const jumpSpeed = 5;
+        creature.y += jumpHeight * Math.sin(counter / jumpSpeed); 
+        counter++;
+        if (creature.y > initialY) {
+            doJump = false;
+        }
+    }
 }
+    function jump(ev) {
+            console.log(ev.code);
+            if (ev.code == 'Space') {
+                doJump = true;
+            }
+        }
+
+    drawCreature(creature.x, creature.y, creature.s);
+
+
 
 document.addEventListener('keydown', moveController);
+document.addEventListener('keydown', jump);
