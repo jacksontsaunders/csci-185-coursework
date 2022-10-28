@@ -9,8 +9,8 @@ function setup() {
     createCanvas(canvasWidth, canvasHeight);
 }
     function drawCreature(centerX, centerY, size , faceColor = 'orange',backupColor = 'black'){
-        fill(backupColor)
-        let sf = size / 5;
+         fill(backupColor)
+         let sf = size / 5;
          square(centerX-sf * 1 ,centerY-sf * 4,size -sf * 3,) //Stem
          fill(faceColor);
          circle(centerX, centerY, size); //100, 400, 50
@@ -71,9 +71,9 @@ function draw() {
             }
         }
 
-    drawCreature(creature.x, creature.y, creature.s);
+   
 
 
 
 document.addEventListener('keydown', moveController);
-document.addEventListener('keydown', jump);
+document.addEventListener('space', jump);
