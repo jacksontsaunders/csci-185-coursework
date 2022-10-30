@@ -7,6 +7,11 @@ const c1 = {
     width: 200,
     speed: -3,
     color: 'gray'}
+const road = {
+    x: 00,
+    y: 510,
+    size: 2000,
+    color: 'black'};
 let stars = [];
 let doJump = false;
 let counter = 0;
@@ -76,7 +81,10 @@ function drawCar(x, y, size, fillColor, wheelColor='black') {
     circle(x - size / 4, y, size / 6);
     circle(x + size / 4, y, size / 6);
 }
-
+function drawRoad(x, y, size, fillColor='black') {
+    strokeWeight(0);
+    rect(x,y,size);
+}
 function makeStars() {
     // picks a random number between 0 and 100:
     let rando = Math.random() * 100;
@@ -109,7 +117,6 @@ function draw() {
     clear();
     if (c % 200 == 0){ makeStars();}
     
-    // frameRate(.8);
     let i = 0;
     fill('white'); 
     while (i < stars.length) {
@@ -117,21 +124,13 @@ function draw() {
         circle(star.x, star.y, star.d);
         i++;
     }
-    // clear();
-    // i = 0;
-    // while (i < stars.length) {
-    //     // const x = Math.random() * canvasWidth;
-    //     // const y = Math.random() * canvasHeight;
-    //     // const width = Math.random() * 3 + 0.5;
-    //     circle(circles[i].x, circles[i].y, circles[i].d);
-    //     i++;
-    // }
+    
     drawCar(c1.x, c1.y, c1.width, c1.color);
     if (c1.x < -200) {
         c1.x = canvasWidth; 
     }
-
-    //frameRate(30);
+    drawRoad(road.x,road.y,road.size);
+ 
     drawCreature(creature.x, creature.y, creature.s);
     //drawGrid(canvasWidth, canvasHeight);
     if (doJump) {
@@ -148,6 +147,7 @@ function draw() {
     }
     c++;
 }
+
 
 
 
