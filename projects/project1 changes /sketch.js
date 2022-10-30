@@ -1,6 +1,12 @@
 const canvasWidth = window.innerWidth;
 const canvasHeight = window.innerHeight;
 const creature = { x: 300, y: 300, s: 100, }
+const c1 = {
+    x: 1100,
+    y: 500,
+    width: 200,
+    speed: -3,
+    color: 'gray'}
 let stars = [];
 let doJump = false;
 let counter = 0;
@@ -57,6 +63,19 @@ function moveController(ev) {
         console.log(doJump)
     }
 }
+function drawCar(x, y, size, fillColor, wheelColor='black') {
+    strokeWeight(0);
+    
+    // body
+    fill(fillColor);
+    rect(x - size/4, y - (size/5 + size/7), size / 2, size/7); // top
+    rect(x - size/2, y - size/5, size, size/5); // bottom
+
+    // wheels:
+    fill(wheelColor);
+    circle(x - size / 4, y, size / 6);
+    circle(x + size / 4, y, size / 6);
+}
 
 function makeStars() {
     // picks a random number between 0 and 100:
@@ -107,6 +126,10 @@ function draw() {
     //     circle(circles[i].x, circles[i].y, circles[i].d);
     //     i++;
     // }
+    drawCar(c1.x, c1.y, c1.width, c1.color);
+    if (c1.x < -200) {
+        c1.x = canvasWidth; 
+    }
 
     //frameRate(30);
     drawCreature(creature.x, creature.y, creature.s);
