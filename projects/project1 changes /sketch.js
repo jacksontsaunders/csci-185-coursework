@@ -3,15 +3,20 @@ const canvasHeight = window.innerHeight;
 const creature = { x: 300, y: 300, s: 100, }
 const c1 = {
     x: 1100,
-    y: 500,
+    y: 685,
     width: 200,
     speed: -3,
-    color: 'gray'}
+    color: 'red'}
 const road = {
     x: 00,
-    y: 510,
+    y: 700,
     size: 2000,
     color: 'black'};
+const roadStripe = {
+    x: 700,
+    y: 715,
+    size: 100,
+    color: 'yellow'};
 let stars = [];
 let doJump = false;
 let counter = 0;
@@ -85,6 +90,22 @@ function drawRoad(x, y, size, fillColor='black') {
     strokeWeight(0);
     rect(x,y,size);
 }
+function drawRoadStripe(x, y, size,fillColor='yellow') {
+    strokeWeight(0);
+    fill('#f7df1e');
+}
+function mouseDragged() {
+    let distance = dist(creature.x, creature.y, mouseX, mouseY);
+    console.log(distance, creature.x, creature.y, mouseX, mouseY);
+    if ( distance < creature.s/2) {
+        activeShape = creature;
+    } 
+   
+    activeShape.x = mouseX;
+    activeShape.y = mouseY;
+}
+
+
 function makeStars() {
     // picks a random number between 0 and 100:
     let rando = Math.random() * 100;
@@ -124,12 +145,15 @@ function draw() {
         circle(star.x, star.y, star.d);
         i++;
     }
-    
+    //Car and car movement
+    c1.x += c1.speed;
     drawCar(c1.x, c1.y, c1.width, c1.color);
     if (c1.x < -200) {
         c1.x = canvasWidth; 
     }
     drawRoad(road.x,road.y,road.size);
+    
+    drawRoadStripe(roadStripe.x,roadStripe.y,roadStripe.size);
  
     drawCreature(creature.x, creature.y, creature.s);
     //drawGrid(canvasWidth, canvasHeight);

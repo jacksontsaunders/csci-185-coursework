@@ -6,3 +6,12 @@ main {
     height: 100vh;
     
 }
+/* followed youtube tutorial https://www.youtube.com/watch?v=kG_x15yhtBQ */
+/* could never get implmented into js, used css instead */
+div {
+    height: 80px;
+    width: 100px;
+    border-left: 20px solid #fff;
+    border-radius : 100%;
+    transform: rotate (-40deg);
+}
