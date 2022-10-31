@@ -17,6 +17,13 @@ const roadStripe = {
     y: 715,
     size: 100,
     color: 'yellow'};
+const cloud = {
+    l: 300,
+    x: 300,
+    Y: 300,
+    t: 300,
+    
+}
 let stars = [];
 let doJump = false;
 let counter = 0;
@@ -94,6 +101,13 @@ function drawRoadStripe(x, y, size,fillColor='yellow') {
     strokeWeight(0);
     fill('#f7df1e');
 }
+function drawCloud(){
+    fill('white');
+    strokeWeight(0);
+    ellipse(300, 150, 126, 97);
+    ellipse(300+62, 150, 70, 60);
+    ellipse(300-62, 150, 70, 60);
+}
 function mouseDragged() {
     let distance = dist(creature.x, creature.y, mouseX, mouseY);
     console.log(distance, creature.x, creature.y, mouseX, mouseY);
@@ -154,6 +168,9 @@ function draw() {
     drawRoad(road.x,road.y,road.size);
     
     drawRoadStripe(roadStripe.x,roadStripe.y,roadStripe.size);
+   
+    fill('white');
+    drawCloud(300, 300, 300, 300);
  
     drawCreature(creature.x, creature.y, creature.s);
     //drawGrid(canvasWidth, canvasHeight);
