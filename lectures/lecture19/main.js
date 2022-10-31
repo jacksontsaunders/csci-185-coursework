@@ -1,7 +1,7 @@
 // ignore this function for now. We'll go over it
 // on Wednesday: 
 async function fetchCourses() {
-    const url = `https://meteor.unca.edu/registrar/class-schedules/api/v1/courses/2022/fall/`;
+    const url = `https://meteor.unca.edu/registrar/class-schedules/api/v1/courses/2023/spring/`;
     data = await fetch(url).then(response => response.json());
     displayResults(data);
 } 
@@ -22,5 +22,14 @@ async function fetchCourses() {
             * Only view classes that meet on Tuesdays and Thursdays? 
 */
 function displayResults(data) {
-    console.log(data);
+//     console.log(data);
+    //dot notation 
+    console.log(data[0].Title);
+    console.log(data[0].Department);
+    console.log(data[0].Instructors[0].Name);
+
+    // Target the element in the DOM
+    // Change its inner content:
+    document.querySelector('#results').innerHTML = data[0].Title;
 }
+
