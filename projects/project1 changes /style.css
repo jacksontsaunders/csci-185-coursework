@@ -10,8 +10,9 @@ main {
 /* could never get implmented into js, used css instead */
 div {
     height: 80px;
-    width: 100px;
-    border-left: 20px solid #fff;
+    width: 120px;
+    border-left: 40px solid #fff;
     border-radius : 100%;
-    transform: rotate (-40deg);
+    /* transform: rotate (90deg);
+    */
 }

@@ -6,23 +6,26 @@ const c1 = {
     y: 685,
     width: 200,
     speed: -3,
-    color: 'red'}
+    color: 'red'
+}
 const road = {
     x: 00,
     y: 700,
     size: 2000,
-    color: 'black'};
-const roadStripe = {
-    x: 700,
-    y: 715,
-    size: 100,
-    color: 'yellow'};
+    color: 'black'
+};
+
 const cloud = {
-    l: 300,
-    x: 300,
-    Y: 300,
-    t: 300,
-    
+    l: 1000,
+    x: 100,
+    y: 175,
+    t: 140,
+}
+const cloud2 = {
+    l: 245,
+    x: 100,
+    y: 175,
+    t: 140,
 }
 let stars = [];
 let doJump = false;
@@ -80,41 +83,47 @@ function moveController(ev) {
         console.log(doJump)
     }
 }
-function drawCar(x, y, size, fillColor, wheelColor='black') {
+function drawCar(x, y, size, fillColor, wheelColor = 'black') {
     strokeWeight(0);
-    
+
     // body
     fill(fillColor);
-    rect(x - size/4, y - (size/5 + size/7), size / 2, size/7); // top
-    rect(x - size/2, y - size/5, size, size/5); // bottom
+    rect(x - size / 4, y - (size / 5 + size / 7), size / 2, size / 7); // top
+    rect(x - size / 2, y - size / 5, size, size / 5); // bottom
 
     // wheels:
     fill(wheelColor);
     circle(x - size / 4, y, size / 6);
     circle(x + size / 4, y, size / 6);
 }
-function drawRoad(x, y, size, fillColor='black') {
+function drawRoad(x, y, size, fillColor = 'black') {
     strokeWeight(0);
-    rect(x,y,size);
+    rect(x, y, size);
 }
-function drawRoadStripe(x, y, size,fillColor='yellow') {
-    strokeWeight(0);
-    fill('#f7df1e');
-}
-function drawCloud(){
+
+function drawCloud() {
     fill('white');
     strokeWeight(0);
-    ellipse(300, 150, 126, 97);
-    ellipse(300+62, 150, 70, 60);
-    ellipse(300-62, 150, 70, 60);
+    ellipse(cloud.l, cloud.x, cloud.y, cloud.t);
+    ellipse(cloud.l + 90, cloud.x, cloud.y, cloud.t);
+    ellipse(cloud.l - 90, cloud.x, cloud.y, cloud.t);
 }
+
+function drawCloud2() {
+    fill('white');
+    strokeWeight(0);
+    ellipse(cloud2.l, cloud2.x, cloud2.y, cloud2.t);
+    ellipse(cloud2.l + 90, cloud2.x, cloud2.y, cloud2.t);
+    ellipse(cloud2.l - 90, cloud2.x, cloud2.y, cloud2.t);
+}
+
 function mouseDragged() {
     let distance = dist(creature.x, creature.y, mouseX, mouseY);
     console.log(distance, creature.x, creature.y, mouseX, mouseY);
-    if ( distance < creature.s/2) {
+    if (distance < creature.s / 2) {
         activeShape = creature;
-    } 
-   
+    }
+
     activeShape.x = mouseX;
     activeShape.y = mouseY;
 }
@@ -131,7 +140,7 @@ function makeStars() {
 
     // draws 1000 stars: 
     strokeWeight(0);
-    fill('white'); 
+    fill('white');
     stars = [];
     let i = 0;
     while (i < 1000) {
@@ -150,10 +159,10 @@ function makeStars() {
 let c = 0;
 function draw() {
     clear();
-    if (c % 200 == 0){ makeStars();}
-    
+    if (c % 200 == 0) { makeStars(); }
+
     let i = 0;
-    fill('white'); 
+    fill('white');
     while (i < stars.length) {
         const star = stars[i];
         circle(star.x, star.y, star.d);
@@ -163,15 +172,14 @@ function draw() {
     c1.x += c1.speed;
     drawCar(c1.x, c1.y, c1.width, c1.color);
     if (c1.x < -200) {
-        c1.x = canvasWidth; 
+        c1.x = canvasWidth;
     }
-    drawRoad(road.x,road.y,road.size);
-    
-    drawRoadStripe(roadStripe.x,roadStripe.y,roadStripe.size);
-   
+    drawRoad(road.x, road.y, road.size);
+
     fill('white');
-    drawCloud(300, 300, 300, 300);
- 
+    drawCloud(cloud.l, cloud.x, cloud.y, cloud.t);
+    drawCloud2(cloud2.l, cloud2.x, cloud2.y, cloud2.t);
+
     drawCreature(creature.x, creature.y, creature.s);
     //drawGrid(canvasWidth, canvasHeight);
     if (doJump) {
