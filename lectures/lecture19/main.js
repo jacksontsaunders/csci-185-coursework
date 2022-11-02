@@ -4,7 +4,7 @@ async function fetchCourses() {
     const url = `https://meteor.unca.edu/registrar/class-schedules/api/v1/courses/2023/spring/`;
     data = await fetch(url).then(response => response.json());
     displayResults(data);
-} 
+}
 /* Your Tasks:
     1. Output the title of the first course to the console.
     2. Output the name of the course's instructor to the console.
@@ -22,43 +22,32 @@ async function fetchCourses() {
             * Only view classes that meet on Tuesdays and Thursdays? 
 */
 function displayResults(data) {
-    // console.log(data);
-    // dot notation 
-        // console.log(data[0]);
-        // console.log(data[0].Title);
-        // console.log(data[0].Department);
-        // console.log(data[0].Instructors[0].Name);
-
-    
-
-    // Target the element in the DOM
-    // Change its inner content:
-   
-    for (let i =0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         const course = data[i];
-        console.log(course);
-        // sometimes courses dont have instructor assigned
-        // we need to check before we try and access the 1st instructor 
-        displayCourse(course)
+        // console.log(course);
+        const department = document.querySelector('#department').value;
+        console.log(department);
+        if (course.Department == department) {
+            displayCourse(course);
+        }
     }
 }
 
-
-function displayCourse () {
+function displayCourse(course) {
+    console.log(course);
     let instructor = 'TBD';
-        if (course.Instructors.length > 0) {
-            instructor = course.Instructors[0].Name;
+    if (course.Instructors.length > 0) {
+        instructor = course.Instructors[0].Name;
+    }
 
-        }
-
-        const template = `
+    const template = `
             <section class="course">
                 <h2>${course.Code}: ${course.Title}</h2>
                 <p>${course.Location.FullLocation}</p>
                 <p>${instructor}</p>
             </section>
         `;
-    
-        document.querySelector('#results').insertAdjacentHTML ('beforeend',template);
-    }
+
+    document.querySelector('#results').insertAdjacentHTML('beforeend', template);
+}
 
