@@ -32,17 +32,17 @@ function displayResults(data) {
     // Target the element in the DOM
     // Change its inner content:
    
-
-    const template = `
-        <section>
-            <h2>${data[0].Code}: ${data[0].Title}</h2>
-            <p>${data[0].Location.FullLocation}</p>
-            <p>${data[0].Instructors[0].Name}</p>
-        </section>
-    `;
-
-    document.querySelector('#results').innerHTML = template;
-
+    for (let i =0; i < data.length; i++) {
+        const template = `
+            <section class="course">
+                <h2>${data[i].Code}: ${data[i].Title}</h2>
+                <p>${data[i].Location.FullLocation}</p>
+                <p>${data[i].Instructors[0].Name}</p>
+            </section>
+        `;
+    
+        document.querySelector('#results').insertAdjacentHTML ('beforeend',template);
+    }
 
 }
 
