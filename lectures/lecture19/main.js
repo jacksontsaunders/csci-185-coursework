@@ -24,25 +24,41 @@ async function fetchCourses() {
 function displayResults(data) {
     // console.log(data);
     // dot notation 
-    console.log(data[0]);
-    console.log(data[0].Title);
-    console.log(data[0].Department);
-    console.log(data[0].Instructors[0].Name);
+        // console.log(data[0]);
+        // console.log(data[0].Title);
+        // console.log(data[0].Department);
+        // console.log(data[0].Instructors[0].Name);
+
+    
 
     // Target the element in the DOM
     // Change its inner content:
    
     for (let i =0; i < data.length; i++) {
+        const course = data[i];
+        console.log(course);
+        // sometimes courses dont have instructor assigned
+        // we need to check before we try and access the 1st instructor 
+        displayCourse(course)
+    }
+}
+
+
+function displayCourse () {
+    let instructor = 'TBD';
+        if (course.Instructors.length > 0) {
+            instructor = course.Instructors[0].Name;
+
+        }
+
         const template = `
             <section class="course">
-                <h2>${data[i].Code}: ${data[i].Title}</h2>
-                <p>${data[i].Location.FullLocation}</p>
-                <p>${data[i].Instructors[0].Name}</p>
+                <h2>${course.Code}: ${course.Title}</h2>
+                <p>${course.Location.FullLocation}</p>
+                <p>${instructor}</p>
             </section>
         `;
     
         document.querySelector('#results').insertAdjacentHTML ('beforeend',template);
     }
-
-}
 
