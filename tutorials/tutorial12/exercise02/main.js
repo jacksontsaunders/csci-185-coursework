@@ -18,9 +18,9 @@ function setup() {
 
 function drawShape(x,y,size,fillColor1,fillColor2) {
         fill(fillColor1);
-        circle(x,y,size);
+        circle(x, y, size);
         fill(fillColor2);
-        circle(x,y,size*.5);
+        circle(x, y, size * .5);
     }
     
 
