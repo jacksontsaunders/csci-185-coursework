@@ -15,6 +15,13 @@ function setup() {
 
     drawGrid(canvasWidth, canvasHeight);
 }
-    drawShape(x,y,size,color1,color2);
+
+function drawShape(x,y,size,fillColor1,fillColor2) {
+        fill(fillColor1);
+        circle(x,y,size);
+        fill(fillColor2);
+        circle(x,y,size*.5);
+    }
+    
 
 
