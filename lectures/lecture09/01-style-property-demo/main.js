@@ -1,4 +1,4 @@
-
+//
 const makeRed = () => {
     // your code here...
     console.log('Change background to red');
