@@ -12,15 +12,16 @@ function setup() {
 
     drawGrid(canvasWidth, canvasHeight);
 }
-function drawElmo(x, y, size, color, hasNose = '#db5461') {
+function drawElmo(x, y, size, color, hasNose) {
     fill(color);
+    let sf = size / 5;
     circle(x, y, size);
     fill('white');
-    circle(x-20, y-25, size/4); //right eye
-    circle(x+20, y-25, size/4); //left eye
+    circle(x-sf*.8, y-sf*.75, size/4); //right eye
+    circle(x+sf*.8, y-sf*.75, size/4); //left eye
     fill('black');
-    circle(x-20, y-25, size/12);
-    circle(x+20, y-25, size/12);
+    circle(x-sf*.8, y-sf*.75, size/12);
+    circle(x+sf*.8, y-sf*.75, size/12);
     if (hasNose == true) {
         fill('#db5461');
         ellipse(x, y+5, size/4, size/2.9);
@@ -29,3 +30,16 @@ function drawElmo(x, y, size, color, hasNose = '#db5461') {
 }
 
 
+// function drawElmo(x, y, size, color, hasNose) {
+//     fill(color);
+//     circle(x, y, size);
+//     fill('white');
+//     circle(x-20, y-25, size/4); //right eye
+//     circle(x+20, y-25, size/4); //left eye
+//     fill('black');
+//     circle(x-20, y-25, size/12);
+//     circle(x+20, y-25, size/12);
+//     if (hasNose == true) {
+//         fill('#db5461');
+//         ellipse(x, y+5, size/4, size/2.9);
+//     }
