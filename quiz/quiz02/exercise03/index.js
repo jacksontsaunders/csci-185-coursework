@@ -21,15 +21,11 @@ const photos = [
 // that draws all of the pictures to the screen 
 // where the is_favorite property is set to true. 
 // 8 photos should be displayed.
-for (let i = 0; i < photos.length; i++ ) {
+for (let i = 0; i < photos.length; i++) {
     if (photos[i].is_favorite == true) {
         console.log(photos[i]);
-        const template = `<p>${photos[i].image_url}</p>`;
-        // document.querySelector('div').images.insertAdjacentHTML('beforeend', template); 
-        document.querySelector('#output').insertAdjacentHTML('beforeend', template); 
+        const template = '<img src="' + photos[i].image_url + '">';
+        document.querySelector('.images').innerHTML += template;
+    }
 }
-}
-// for (let i = 0; i < photos.length; i++ ) {
-//     const template = `<p>${photos[i]}</p>`;
-//     document.querySelector('#images').insertAdjacentHTML('beforeend', template); 
-// }
+// document.querySelector("img").src = "images/fox.jpg";
