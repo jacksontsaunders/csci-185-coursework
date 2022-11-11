@@ -28,4 +28,4 @@ for (let i = 0; i < photos.length; i++) {
         document.querySelector('.images').innerHTML += template;
     }
 }
-// document.querySelector("img").src = "images/fox.jpg";
+
