@@ -27,6 +27,14 @@ async function getAlbums (term) {
 }
 
 async function getArtist (term) {
+    /*
+    The Plan:
+    1. Go out to spotify and ask for artist info matching the search term
+    (ex. Drake). To do this we need to use the fetch API.
+    2. Wait for Spotify to respond to us.
+    3.Once spotify gives us our data, we're going to print it to the console.
+    4. Figure out how to display our artist 
+    */
     console.log(`
         get artists from spotify based on the search term
         "${term}" and load the first artist into the #artist section 
@@ -36,9 +44,10 @@ async function getArtist (term) {
 
 document.querySelector('#search').onkeyup = function (ev) {
     // Number 13 is the "Enter" key on the keyboard
+    console.log(ev);
     console.log(ev.keyCode);
     if (ev.keyCode === 13) {
-        ev.preventDefault();
+        // ev.preventDefault();
         search();
     }
 }
