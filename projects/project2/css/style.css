@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+
+#mapid { 
+    height: 80vh; 
+    width: 80vw;
+    border: solid 1px #000;
+}
+.info  {
+    width: 300px;
+}
+.info img {
+    width: 100%;
+}

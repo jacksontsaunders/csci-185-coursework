@@ -1,5 +1,5 @@
 //initialize map:
-const mymap = L.map('mapid').setView([35.9,-82.50], 8.5);
+const mymap = L.map('mapid').setView([35.9,-82.50], 9.9);
 
 //initialize tiles (there are many options):
 // L.tileLayer.provider('Stamen.TonerLite').addTo(mymap);
@@ -49,13 +49,37 @@ const markerBeech = L.marker([36.19,-81.88]).addTo(mymap);
 //     [51.503, -0.06],
 //     [51.51, -0.047]
 // ]).addTo(mymap);
-
+const catTemplate = `<section class = "info">
+                    <img src = "catalochee.jpeg"/>
+                    <h2>Cataloochee</h2>
+                    </section>
+`; 
+const wlTemplate = `<section class = "info">
+                    <img src = "wolflaurel.jpeg"/>
+                    <h2>Wolf Laurel</h2>
+                    </section>
+`; 
+const appTemplate = `<section class = "info">
+                    <img src = "appski.jpeg"/>
+                    <h2>Appalachian Ski Mountain</h2>
+                    </section>
+`; 
+const sugarTemplate = `<section class = "info">
+                    <img src = "sugarmtn.jpeg"/>
+                    <h2>Sugar Mountain Resort</h2>
+                    </section>
+`; 
+const beechTemplate = `<section class = "info">
+                    <img src = "beechmtn.jpeg"/>
+                    <h2>Beech Mountain Ski Resort</h2>
+                    </section>
+`; 
 // connect each object to a "popup" effect:
-markerWL.bindPopup("<b>Wolf Laurel</b><br>Resort info .");
-markerCat.bindPopup("<b>Cataloochee</b><br>Resort info.");
-markerApp.bindPopup("<b>Appalachian Ski Mountain</b><br>Resort info.");
-markerSugar.bindPopup("<b>Sugar Mountain Resort</b><br>Resort info.");
-markerBeech.bindPopup("<b>Beech Mountain Ski Resort</b><br>Resort info.");
+markerWL.bindPopup(wlTemplate);
+markerCat.bindPopup(catTemplate);
+markerApp.bindPopup(appTemplate);
+markerSugar.bindPopup(sugarTemplate);
+markerBeech.bindPopup(beechTemplate);
 
 // circle.bindPopup("I am a circle.");
 // polygon.bindPopup("I am a polygon.");
