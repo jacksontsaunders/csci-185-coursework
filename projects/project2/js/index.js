@@ -1,5 +1,5 @@
 //initialize map:
-const mymap = L.map('mapid').setView([35.9,-82.50], 9.9);
+const mymap = L.map('mapid').setView([35.9,-82.50], 8.9);
 
 //initialize tiles (there are many options):
 // L.tileLayer.provider('Stamen.TonerLite').addTo(mymap);
@@ -52,26 +52,51 @@ const markerBeech = L.marker([36.19,-81.88]).addTo(mymap);
 const catTemplate = `<section class = "info">
                     <img src = "catalochee.jpeg"/>
                     <h2>Cataloochee</h2>
+                    <h2>Hours</h2>
+                    <h2>Terrain Parks: Yes or No</h2>
+                    <h2>Number of runs open</h2>
+                    <h2>Number of lifts open</h2>
+                    <h2>https://cataloochee.com/</h2>
                     </section>
 `; 
 const wlTemplate = `<section class = "info">
                     <img src = "wolflaurel.jpeg"/>
-                    <h2>Wolf Laurel</h2>
+                    <h2>Wolf Ridge</h2>
+                    <h2>Hours</h2>
+                    <h2>Terrain Parks: Yes or No</h2>
+                    <h2>Number of runs open</h2>
+                    <h2>Number of lifts open</h2>
+                    <h2>https://skiwolfridgenc.com/</h2>
                     </section>
 `; 
 const appTemplate = `<section class = "info">
                     <img src = "appski.jpeg"/>
                     <h2>Appalachian Ski Mountain</h2>
+                    <h2>Hours</h2>
+                    <h2>Terrain Parks: Yes or No</h2>
+                    <h2>Number of runs open</h2>
+                    <h2>Number of lifts open</h2>
+                    <h2>https://appskimtn.com/</h2>
                     </section>
 `; 
 const sugarTemplate = `<section class = "info">
                     <img src = "sugarmtn.jpeg"/>
                     <h2>Sugar Mountain Resort</h2>
+                    <h2>Hours</h2>
+                    <h2>Terrain Parks: Yes or No</h2>
+                    <h2>Number of runs open</h2>
+                    <h2>Number of lifts open</h2>
+                    <h2>http://www.skisugar.com/</h2>
                     </section>
 `; 
 const beechTemplate = `<section class = "info">
                     <img src = "beechmtn.jpeg"/>
                     <h2>Beech Mountain Ski Resort</h2>
+                    <h2>Hours</h2>
+                    <h2>Terrain Parks: Yes or No</h2>
+                    <h2>Number of runs open</h2>
+                    <h2>Number of lifts open</h2>
+                    <h2>https://www.beechmountainresort.com/</h2>
                     </section>
 `; 
 // connect each object to a "popup" effect:
