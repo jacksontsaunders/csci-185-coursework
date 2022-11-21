@@ -22,6 +22,20 @@ async function getTracks(term) {
     console.log(data[0].artist.name);
     console.log(data[0].album.image_url);
     document.querySelector('#tracks').innerHTML = data[0].name;
+
+    const template = `
+    <section class="track-item preview">
+    <img src="https://i.scdn.co/image/ab67616d0000b27329d00196831bec20ebbff5c7">
+    <i class="fas fa-play play-track" aria-hidden="true"></i>
+    <div class="label">
+        <h2>${data[0].name}</h2>
+        <p>
+            ${data[0].artist.name}
+        </p>
+    </div>
+</section>
+`;
+document.querySelector('#tracks').innerHTML = template;
 }
 
 async function getAlbums(term) {
