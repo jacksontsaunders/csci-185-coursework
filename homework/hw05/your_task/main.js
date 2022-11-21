@@ -21,22 +21,42 @@ async function getTracks(term) {
     console.log(data[0].name);
     console.log(data[0].artist.name);
     console.log(data[0].album.image_url);
-    document.querySelector('#tracks').innerHTML = data[0].name;
-
-    const template = `
-    <section class="track-item preview">
-    <img src="https://i.scdn.co/image/ab67616d0000b27329d00196831bec20ebbff5c7">
-    <i class="fas fa-play play-track" aria-hidden="true"></i>
+    // clear out the old stuff before adding new stuff
+    document.querySelector('#tracks').innerHTML = "";
+    for (let i = 0; i < 5; i++) {
+        const template = `
+    <section class="track-item preview" onclick="playSong('${data[i].id}')">
+        <img src="${data[i].album.image_url}">
+        <i class="fas fa-play play-track" aria-hidden="true"></i>
     <div class="label">
-        <h2>${data[0].name}</h2>
+        <h2>${data[i].name}</h2>
         <p>
-            ${data[0].artist.name}
+            ${data[i].artist.name}
         </p>
     </div>
 </section>
 `;
-document.querySelector('#tracks').innerHTML = template;
+        document.querySelector('#tracks').insertAdjacentHTML('beforeend', template);
+    }
 }
+
+// the job of play song function is to create an iframe and replace the content
+// in the #artist region with the iframe
+function playSong(id) {
+    const template = `
+        <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/track/${id}?utm_source=generator&theme=0" 
+        width="100%" 
+        height="352" 
+        frameBorder="0" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy"></iframe>
+        `;
+    
+    document.querySelector('#artist').innerHTML = template;
+}
+
 
 async function getAlbums(term) {
     const albumsEndpoint = baseURL + "?q=" + term + "&type=album";
