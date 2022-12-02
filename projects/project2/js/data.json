@@ -2,48 +2,63 @@
     {
         "name": "Wolf Ridge" , 
         "website": "https://skiwolfridgenc.com/",
-        "lifts": true,
+        "lifts": 10,
         "runs": 10,
-        "cordinates": [35.95,-82.51],
+        "coordinates": [35.95,-82.51],
         "hours": "9am-5pm",
-        "terrainparks": true
+        "terrainparks": "Yes",
+        "img_url":  "wolflaurel.jpeg"
     },
     {
         "name": "Cataloochee",
         "website": "https://cataloochee.com/",
-        "lifts": true,
+        "lifts": 10,
         "runs": 10,
-        "cordinates": [35.55,-83.09],
+        "coordinates": [35.55,-83.09],
         "hours": "9am-10pm",
-        "terrainparks": true
+        "terrainparks": "Yes, but check website to see if open",
+        "img_url":  "catalochee.jpeg"
     },
     {
         "name": "Sugar Mountain",
         "website": "http://www.skisugar.com/",
-        "lifts": true,
+        "lifts": 10,
         "runs": 10,
-        "cordinates": [36.13,-81.86],
+        "coordinates": [36.13,-81.86],
         "hours": "9am-10pm",
-        "terrainparks": false
+        "terrainparks": "No",
+        "img_url":  "sugarmtn.jpeg"
 
     },
     {
         "name": "Beech Mountain",
         "website": "https://cataloochee.com/",
-        "lifts": true,
+        "lifts": 10,
         "runs": 10,
-        "cordinates": [36.19,-81.88],
+        "coordinates": [36.19,-81.88],
         "hours": "9am-10pm",
-        "terrainparks": true
+        "terrainparks": "Yes",
+        "img_url":  "beechmtn.jpeg"
     },
     {
         "name": "App Ski",
         "website": "https://cataloochee.com/",
-        "lifts": true,
+        "lifts": 10,
         "runs": 10,
-        "cordinates": [36.17,-81.66],
+        "coordinates": [36.17,-81.66],
         "hours": "9am-10pm",
-        "terrainparks": true
+        "terrainparks": "Yes",
+        "img_url":  "appski.jpeg"
+    },
+    {
+        "name": "Brighton",
+        "website": "https://brightonresort.com/",
+        "lifts": 20,
+        "runs": 100,
+        "coordinates": [40.59,-111.59],
+        "hours": "9am-10pm",
+        "terrainparks": "Yes",
+        "img_url":  "appski.jpeg"
     }
 ]
 
