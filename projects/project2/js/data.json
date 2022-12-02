@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Wolf Ridge" , 
+        "website": "https://skiwolfridgenc.com/",
+        "lifts": true,
+        "runs": 10,
+        "cordinates": [35.95,-82.51],
+        "hours": "9am-5pm",
+        "terrainparks": true
+    },
+    {
+        "name": "Cataloochee",
+        "website": "https://cataloochee.com/",
+        "lifts": true,
+        "runs": 10,
+        "cordinates": [35.55,-83.09],
+        "hours": "9am-10pm",
+        "terrainparks": true
+    },
+    {
+        "name": "Sugar Mountain",
+        "website": "http://www.skisugar.com/",
+        "lifts": true,
+        "runs": 10,
+        "cordinates": [36.13,-81.86],
+        "hours": "9am-10pm",
+        "terrainparks": false
+
+    },
+    {
+        "name": "Beech Mountain",
+        "website": "https://cataloochee.com/",
+        "lifts": true,
+        "runs": 10,
+        "cordinates": [36.19,-81.88],
+        "hours": "9am-10pm",
+        "terrainparks": true
+    },
+    {
+        "name": "App Ski",
+        "website": "https://cataloochee.com/",
+        "lifts": true,
+        "runs": 10,
+        "cordinates": [36.17,-81.66],
+        "hours": "9am-10pm",
+        "terrainparks": true
+    }
+]
+
+
+
+
+
