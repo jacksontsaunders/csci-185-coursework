@@ -14,7 +14,7 @@ function displayMarkers(resorts) {
                     <img src = "${resort.img_url}"/>
                     <h2>${resort.name}</h2>
                     <h2>${resort.hours}</h2>
-                    <h2>Terrain park: ${resort.terrainparks}</h2>
+                    <h2>Terrain park: ${trueYes(resort.terrainparks)} ${showMessage(resort.terrainparksinfo)}</h2>
                     <h2>Number of runs: ${resort.runs}</h2>
                     <h2>Number of lifts: ${resort.lifts}</h2>
                     <h2>${resort.website}</h2>
@@ -46,3 +46,21 @@ L.tileLayer.provider('Stamen.Terrain').addTo(mymap);
 
 
 getInfo();
+
+//Not sure where to insert into
+function trueYes (bool){
+    if (bool){
+        return 'Yes';
+    }
+    
+        return 'No'
+    
+}
+function showMessage (message) {
+    if (message != null){
+        return "("+ message+")";
+    }
+    
+        return ''
+    
+}
